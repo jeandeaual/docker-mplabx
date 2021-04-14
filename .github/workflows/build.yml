@@ -1,5 +1,12 @@
 name: Build the images
 on:
+  push:
+    branches:
+      - master
+    paths:
+      - .github/workflows/build.yml
+      - build.sh
+      - Dockerfile
   workflow_dispatch:
     inputs: {}
 jobs:
